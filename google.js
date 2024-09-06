@@ -2,7 +2,7 @@
 let div = document.getElementById("info");
 const searchButton = document.getElementById('btn');
 const searchInput = document.getElementById('search-box');
-let loader=document.getElementById("loader");
+let loader = document.getElementById("loader");
 
 searchButton.addEventListener('click',searchOnGoogle)
 
