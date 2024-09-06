@@ -1,0 +1,120 @@
+/* Resetting margin and padding for a clean slate */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.info-container{
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+/* Basic styling for header */
+header {
+    display: flex;
+    justify-content:flex-start;
+    margin-left: 5rem;
+    padding: 20px;
+    background-color: #fff;
+}
+h2{
+    color: #1a0dab;
+    margin: 0px;
+}
+p{
+    color: black;
+}
+#content{
+    justify-content: center;
+}
+.logo{
+    height: 3.5rem;
+    width: 10.5rem;
+}
+#info{
+    margin: 20px 7rem;
+    
+}
+
+/* Search container styling */
+.search-container {
+    display: flex;
+    margin-left:5rem;
+    gap: 10px;
+    align-items:flex-start;
+    padding: 20px;
+}
+
+
+input[type="text"] {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4285F4; 
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #357ae8;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #e0e0e0;
+}
+
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #555;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+.loading{
+    display: flex;
+   justify-content: center;
+    margin: 0px 18rem;
+   height: 150px;
+   width: 150px;
+}
+#load{
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .search-container {
+        width: 80%;
+        margin-left: 0px;
+    }
+    button{
+        height: 40px;
+        width: 82px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

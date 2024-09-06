@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT-like Interface</title>
+    <link rel="stylesheet" href="gemini.css">
+   
+</head>
+<body>
+    <header>
+
+            <span id="title">Gemini AI </span><img src="google-gemini-icon.webp" alt="" id="logo">
+        </div>
+    </header>
+
+    <main>
+      <div id="loading" class="hidden">
+        <div style="color: white;">Generating Response...</div>
+        <br>
+        <span id="load"></span>
+    </div>
+        <div class="content" id="content" style="color: white;">
+          <div id="initial-text">
+            <h1 >Hello, there!</h1><h1 id="text">How can I help you today?</h1>
+          </div>
+           
+        </div>
+    </main>
+    <div class="search-bar-container">
+        <input id="search-input" type="text" placeholder="Ask me anything...">
+        <button id="btn" type="submit">Search</button>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+    </footer>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+    <script type="module">
+        let btn=document.getElementById("btn");
+        let div=document.createElement("div");
+        let rest=document.getElementById("content");
+        
+        const loading= (isLoading)=>
+    {
+        
+        const load= document.getElementById("loading");
+        if(isLoading)
+        {
+            load.classList.remove('hidden');
+            
+        }
+        else{
+            load.classList.add('hidden');
+        }
+    
+    }
+
+      import { GoogleGenerativeAI } from "@google/generative-ai";
+
+      // Fetch your API_KEY
+      const API_KEY = "AIzaSyDFdy3od5J7JdeLHaQ13UXyujVAmhURVZA";
+
+      // Access your API key (see "Set up your API key" above)
+      const genAI = new GoogleGenerativeAI(API_KEY);
+
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
+async function run() {
+  rest.innerText="";
+  loading(true);
+   let search=document.getElementById("search-input").value;
+  const prompt =search;
+
+  const result = await model.generateContent(prompt);
+  const response = await result.response;
+  console.log(response)
+  const text = response.text();
+  console.log(text)
+  const arr=text.split("*");
+  let s=arr.join("");
+  const arr2=s.split("#");
+  let data=arr2.join("");
+
+  
+  
+  
+  loading(false)
+  rest.innerHTML=`<p  id="results">${data}</p>`
+
+
+  
+}
+
+btn.addEventListener("click" ,run);
+
+
+  </script>
+    <script src="gemini.js"></script>
+</body>
+</html>

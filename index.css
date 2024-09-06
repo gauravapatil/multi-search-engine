@@ -1,0 +1,91 @@
+/* Resetting margin and padding for a clean slate */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: bisque;
+}
+h1{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 80px;
+}
+#text{
+    margin: 2px;
+    color:rgb(116, 68, 220);
+}
+h3{
+    margin-top: 50px;
+}
+a{
+    text-decoration: none;
+}
+/* Container for centering content and making it responsive */
+.container {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Styling for each card */
+.card {
+    background:white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+.icon{
+    height: 2rem;
+    width: 2rem;
+    margin-bottom: 10px;
+}
+
+/* .gemini-icon{
+    
+.google-icon{
+    height: 2rem;
+    width: 2rem;
+    margin-bottom: 10px;
+}
+.wikipedia-icon{
+    height: 2rem;
+    width: 2rem;
+    margin-bottom: 10px;
+} */
+
+/* Styling for icons */
+
+
+/* Specific colors for icons */
+
+/* Styling for text */
+.text {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        max-width: 300px;
+    }
+}

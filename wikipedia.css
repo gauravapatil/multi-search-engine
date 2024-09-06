@@ -1,0 +1,137 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes up at least full viewport height */
+}
+#text{
+    font-size: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+/* Header styling */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo{
+    height: 5rem;
+    width: 9rem;
+}
+#load{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mask-image: url('download\ \(1\).svg');
+    aspect-ratio: 1 / 1;
+    mask-size: 100%;
+    background-color:black;
+    mask-position: center;
+    width: 2.5rem;
+    mask-repeat: no-repeat;
+} 
+.hidden{
+    display: none;
+}
+#loading{
+   margin: 12rem auto;
+   height: 50px;
+   width: 50px;
+   background-color: white;
+}
+/* Search bar container styling */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-bar-container input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    
+    margin-right: 10px;
+    flex: 1; /* Allow the input to take available space */
+    max-width: 600px;
+}
+
+.search-bar-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff; /* Primary button color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Main content styling */
+main {
+    flex: 1; /* Allows main section to expand and fill available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+/* Footer styling */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #555;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+.result-item {
+    margin-bottom: 20px;
+  }
+  
+  .result-title {
+    font-size: 22px;
+  }
+  
+  .result-snippet {
+    font-size: 15px;
+    color: #444;
+  }
+  
+  .result-link {
+    color: #006621;
+    text-decoration: none;
+    display: block;
+    overflow-wrap: break-word;
+  }
+  

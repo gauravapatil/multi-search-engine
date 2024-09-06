@@ -1,0 +1,154 @@
+/* Reset margin and padding for a clean slate */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    
+}
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50rem;
+}
+/* Flexbox container for layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes up at least full viewport height */
+    background-color: black;
+}
+#title{
+    font-size:25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: white;
+}
+/* Header styling */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+h1{
+    color: white;
+    font-size:80px;
+}
+#text{
+    color: mediumorchid;
+}
+#logo {
+        height: 1.5rem;
+        width: 1.5rem;
+        padding: 7px;
+}
+
+.logo i {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#load{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mask-image: url('download\ \(1\).svg');
+    aspect-ratio: 1 / 1;
+    mask-size: 100%;
+    background-color:white;
+    mask-position: center;
+    width: 2.5rem;
+    mask-repeat: no-repeat;
+} 
+.hidden{
+    display: none;
+}
+#loading{
+   margin: 12rem auto;
+   height: 50px;
+   width: 50px;
+   background-color: rgb(16, 16, 16);
+}
+/* Main content styling */
+main {
+    flex: 1; /* Allows main section to expand and fill available space */
+    display: flex;
+    justify-content: center;
+}
+#results{
+    color: white;
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+    
+    line-height: 1.5rem;
+}
+/* Search bar container styling */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.search-bar-container input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+   
+    border-radius: 24px;
+    margin-right: 10px;
+    flex: 1; /* Allow the input to take available space */
+    max-width: 500px;
+}
+
+.search-bar-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #006eff; /* Primary button color */
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styling */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #555;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .search-bar-container {
+        flex-direction: column;
+    }
+
+    .search-bar-container input[type="text"], .search-bar-container button {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 5px 0;
+    }
+}

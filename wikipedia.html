@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia Search</title>
+    <link rel="stylesheet" href="wikipedia.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <img src="wikipedia2.jfif" alt="" id="logo">
+            <span id="text">WIKIPEDIA</span>
+        </div>
+    </header>
+    <div class="search-bar-container">
+        <input id="search-box" type="text" placeholder="Search Wikipedia...">
+        <button id="btn" type="submit">Search</button>
+    </div>
+    <main>
+        <div id="loading" class="hidden">
+            <span id="load"></span>
+        </div>
+        <div class="content" id="content">
+            <!-- Main content goes here -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+    </footer>
+    <script src="wikipedia.js"></script>
+</body>
+</html>
+
